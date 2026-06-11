@@ -1,0 +1,7 @@
+Running: xsim.dir/barrShift1_tb_behav/xsimk.exe -simmode gui -wdb barrShift1_tb_behav.wdb -simrunnum 0 -socket 59223
+Design successfully loaded
+Design Loading Memory Usage: 11076 KB (Peak: 11076 KB)
+Design Loading CPU Usage: 108 ms
+Simulation completed
+Simulation Memory Usage: 11848 KB (Peak: 11848 KB)
+Simulation CPU Usage: 187 ms

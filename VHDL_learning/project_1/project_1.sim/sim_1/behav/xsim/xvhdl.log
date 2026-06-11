@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/CAD/Vivado_Projects/VHDL_learning/project_1/project_1.srcs/sources_1/new/barrShift1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'barrShift1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/CAD/Vivado_Projects/VHDL_learning/project_1/project_1.srcs/sim_1/new/barrShift1_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'barrShift1_tb'

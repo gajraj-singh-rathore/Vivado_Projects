@@ -1,0 +1,4 @@
+Breakpoint File Version 1.0
+57,true,"D:/CAD/Vivado_Projects/VHDL_learning/project_1/project_1.srcs/sim_1/new/ex5_8_tb.vhd"
+60,true,"D:/CAD/Vivado_Projects/VHDL_learning/project_1/project_1.srcs/sim_1/new/ex5_8_tb.vhd"
+61,true,"D:/CAD/Vivado_Projects/VHDL_learning/project_1/project_1.srcs/sim_1/new/ex5_8_tb.vhd"
