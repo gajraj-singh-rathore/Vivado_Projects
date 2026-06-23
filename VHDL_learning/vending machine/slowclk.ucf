@@ -1,0 +1,6 @@
+NET "inclk" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+
+NET "inclk" PERIOD = 20.0ns HIGH 40%;
+
+NET "outclk" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "rst" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN ;

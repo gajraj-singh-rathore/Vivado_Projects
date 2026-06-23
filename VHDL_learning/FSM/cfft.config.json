@@ -1,0 +1,20 @@
+{
+  "$schema": "https://dus4nstojanovic.github.io/create-files-from-template-base/cfft.config-schema.json",
+  "defaultTemplateName": "vhdl.vhd",
+  "templates": [
+    {
+      "name": "vhdl.vhd",
+      "options": {
+        "templatePath": "/.cfft.templates/vhdl.vhd",
+        "dirPath": "./",
+        "fileNameTextToBeReplaced": "vhdl",
+        "searchAndReplace": [
+          {
+            "search": "vhdl",
+            "replace": "{fileName}"
+          }
+        ]
+      }
+    }
+  ]
+}
