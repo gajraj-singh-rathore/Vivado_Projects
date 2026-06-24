@@ -1,0 +1,34 @@
+# ======================================================
+# Spartan-3E Starter Board Constraints File (.ucf)
+# Device: XC3S500E-FG320-4
+# ======================================================
+
+#-----------------------
+# Clock Input (50 MHz)
+#-----------------------
+NET "sysclk" LOC = "C9" | IOSTANDARD = LVCMOS33;
+
+
+#-----------------------
+# Switch Inputs
+#-----------------------
+NET "stdby" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP ;
+NET "test" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP ;
+
+# LED Outputs
+#r1y1g1-----------------------
+NET "r1" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "y1" LOC = "E9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "g1" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+#r2y2g2
+NET "r2" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "y2" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "g2" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+#clk @1 sec
+NET "clkled" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+#-----------------------
+# Timing Specification
+# 50 MHz Clock (20 ns period)
+#-----------------------
+NET "sysclk" PERIOD = 20.0ns HIGH 40%;
