@@ -7,8 +7,8 @@ use ieee.std_logic_1164.all;
 entity TL is
     generic(clkprd : time := 20 ns);
     port (
-        test,stdby,clk ; in std_logic;
-        r1,g1,r2,g2,y1,y2 ; out std_logic
+        test,stdby,clk : in std_logic;
+        r1,g1,r2,g2,y1,y2 : out std_logic
 
     );
     end entity;
@@ -28,7 +28,7 @@ architecture rtl of TL is
     signal present_state,next_state : state;
 begin
     process(clk,stdby) 
-        variable count : natural range timer'range*fclk := 0;
+        variable count : natural range timer'range:= 0;
     begin
         if(stdby='1') then
             present_state <= YY; 
