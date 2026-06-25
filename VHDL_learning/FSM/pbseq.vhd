@@ -55,18 +55,24 @@ begin
                 ledWin <= '0';
                 if(pb1='1') then
                     next_state <= S1;
+                elsif(pb2='1' or pb3='1') then
+                    next_state <= IDLE;
                 end if;
             when S1 =>
                 ledIdle <= '0';
                 ledWin <= '0';
                 if(pb2='1') then
                     next_state <= S2;
+                elsif(pb1='1' or pb3='1') then
+                    next_state <= IDLE;
                 end if;
             when S2 =>
                 ledIdle <= '0';
                 ledWin <= '0';
                 if(pb3='1') then
                     next_state <= S3;
+                elsif(pb1='1' or pb2='1') then
+                    next_state <= IDLE;
                 end if;
             when S3 =>
                 ledIdle <= '0';
