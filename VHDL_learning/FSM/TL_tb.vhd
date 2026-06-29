@@ -33,7 +33,7 @@ begin
         test<='0';
         wait for 100 ns;
         stdby<='1';
-        wait for 100 ns;
+        wait for 2 sec;
         stdby<='0';
         wait for 100 ns;
         wait;

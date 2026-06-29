@@ -24,13 +24,13 @@ architecture rtl of TL is
     constant fclk : natural := 1 sec / clkprd;
     signal timer :  integer range 0 to 45*fclk ;
 
-    type state is (RG,RY,GR,YR,YY);
+    type state is (RG,RY,GR,YR,YY, NONE);
     signal present_state,next_state : state;
 begin
     process(clk,stdby) 
         variable count : natural range timer'range:= 0;
     begin
-        if(stdby='1') then
+        if(rising_edge(stdby)) then
             present_state <= YY; 
             count := 0;
         elsif rising_edge(clk) then
@@ -45,9 +45,19 @@ begin
     process(present_state,test,stdby) 
     begin
         case present_state is
+            when NONE => 
+                y1<='0', y2<='0', r1<='0', r2<='0', g1<='0', g2<='0';
+                next_state <= YY;
+                timer<=fclk/2;;
             when YY =>
                 y1<='1', y2<='1', r1<='0', r2<='0', g1<='0', g2<='0';
-                timer<=timeTest*fclk;
+                if(stdby='1') then
+                    next_state <= NONE;
+                    timer<=fclk/2;
+                else
+                    timer<=timeTest*fclk;
+                    next_state<=RY;
+                end if;
             when RG =>
                 r1 <= '1'; g1 <= '0'; y1 <= '0';
                 r2 <= '0'; g2 <= '1'; y2 <= '0';
